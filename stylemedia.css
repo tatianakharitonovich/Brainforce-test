@@ -15,7 +15,7 @@
 		font-size: 16px;
 	}
 
-	.header__link {
+	.header__link, .header__link_search {
 		font-size: 16px;
 	}
 
@@ -48,7 +48,7 @@
 		font-size: 14px;
 	}
 
-	.header__link {
+	.header__link, .header__link_search {
 		font-size: 14px;
 	}
 
@@ -76,7 +76,7 @@
 		padding: 1.6% 3% 1.6% 0;
 	}
 
-	.header__link {
+	.header__link, .header__link_search {
 		font-size: 12px;
 	}
 
@@ -114,6 +114,28 @@
 
 	.header__blockphone, .header__nav {
 		display: none;
+	}
+
+	.header__link_click {
+		font-size: 20px;
+		line-height: 25px;
+		display: block;
+		width: 12em;
+		padding: 15px;
+		text-align: center;
+		border: 1px solid #333333;
+		background-color: #F4F4F4;
+	}
+
+	.header__nav_click {
+		width: 100%;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		top: 80px;
+		z-index: 1;
+		background: rgba(244,244,244,0.7);
 	}
 
 	.header__nav_add {
