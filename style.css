@@ -1,0 +1,407 @@
+@font-face {
+	font-family: Geometria;
+	src: url(fonts/geometria-medium.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Geometria;
+	src: url(fonts/geometria-bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Geometria;
+	src: url(fonts/geometria.ttf);
+	font-weight: 400;
+}
+
+body {
+	max-width: 1920px;
+	margin: auto;
+	font-family: Geometria, sans-serif;
+	color: #333333;
+	overflow-x: hidden;
+}
+
+.header {
+	width: 95.6%;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	padding-right: 5%;
+}
+
+.header__burger_button {
+	width: 40px;
+	height: 5px;
+	background-color: #333333;
+	border-radius: 8px;
+	border: 1px solid #333333;
+	outline: none;
+	position: relative;
+	display: none;
+}
+
+.header__burger_button::before {
+	content: '';
+	position: absolute;
+	left: -1px;
+	bottom: 10px;
+	width: 38px;
+	height: 3px;
+	background-color: #333333;
+	border: 1px solid #333333;
+	border-radius: 8px;
+}
+
+.header__burger_button::after {
+	content: '';
+	position: absolute;
+	left: -1px;
+	bottom: -12px;
+	width: 38px;
+	height: 3px;	
+	background-color: #333333;
+	border: 1px solid #333333;
+	border-radius: 8px;
+}
+
+.header__blockphone {
+	padding: 1.6% 5% 1.6% 0;
+	
+}
+
+.header__phone {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 10px 0 10px 0;
+}
+
+.header__phone:hover {
+	cursor: pointer;
+}
+
+.header__nav {
+	width: 46.3%;
+	padding-right: 9.5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__link {
+	position: relative;
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #333333;
+}
+
+.header__link:hover {
+	cursor: pointer;
+	color: #828282;
+}
+
+.header__link:hover::before {
+	content: '';
+	position: absolute;
+	left: -5px;
+	bottom: 52px;
+	width: 95%;
+	background-color: #FFDB2D;
+	border: 5px solid #FFDB2D;
+	border-radius: 0px 0px 8px 8px;
+}
+
+.header__nav_add {
+	width: 17.4%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__link_search {
+	border-bottom: 1px dashed #333333;
+}
+
+.header__button {
+	width: 148px;
+	height: 44px;
+	border-radius: 8px;
+	cursor: pointer;
+	background-color: transparent;
+	padding: 12px 20px;
+	border: 1px solid #333333;
+	outline: none;
+	color: #333333;
+	font-family: Geometria, sans-serif; ;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.header__button:hover {
+	background-color: #828282;
+	border: 1px solid #828282;
+	color: #FFFFFF;
+}
+
+/*Section main*/
+
+.main {
+	position: relative;
+	overflow: hidden; 
+}
+
+.main__blocklink {
+	padding: 5% 0 0 2%;
+}
+
+.main__link {
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #333333;
+}
+
+.main__link:hover {
+	cursor: pointer;
+	color: #828282;
+}
+
+.main__block_wrap {
+	padding: 0 2% 0 2%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main__section_info {
+	width: 67%;
+	padding: 0 1.5% 1.5% 0;
+}
+
+.main__title {
+	font-weight: bold;
+	font-size: 1.875em;
+	margin: 10px 0 20px 0;
+}
+.main__quote {
+	width: 49%;
+	margin-bottom: 4%;
+	font-weight: 400;
+	color: #828282;
+	font-size: 16px;
+}
+
+.main__maincontent_start, .main__maincontent_middle, .main__maincontent_end {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 7.7%;
+}
+
+.main__block_sertific {
+	width: 25%;
+}
+
+.main__subtitle {
+	width: 76%;
+	font-weight: 500;
+	font-size: 1.5em;
+	position: relative;
+	margin: 0;
+}
+
+.main__subtitle::before { 
+	content: '';
+	position: absolute;
+	left: 20px;
+	bottom: -5px;
+	width: 108%;
+	border: 1px solid #FFDB2D;
+	border-radius: 8px;
+	background-color: #FFDB2D;
+}
+
+.main__block_articles {
+	width: 74.4%;
+}
+
+.main__article {
+	padding: 4% 6% 4% 4%;
+	background: #F4F4F4;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.main__article_content {
+	width: 90%;
+}
+
+.main__article_title {
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 150%;
+	margin: 0;
+}
+
+.main__article_text {
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 130%;
+	margin: 20px 0 10px 10px;
+	/*display: none;*/
+
+}
+
+.main__article_sec_button {
+	padding-top: 3px;
+}
+
+.main__article_button {
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	border-radius: 50%;
+	background-image:url(img/statnormal.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: 0;
+	z-index: 1;
+	position: relative;
+}
+
+.main__article_button:hover {
+	background-image:url(img/startactive.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: 0;
+}
+
+.main__section_chat {
+	width: 33%;
+}
+.main__block_chat {
+	height: 37.7%;
+	padding-bottom: 19%;	
+}
+
+.main__block_chatcontent {
+	height: 100%;
+	background-color: #E0E0E0;
+	border-radius: 8px;
+}
+
+.main__block_wallpaper {
+	position: absolute;
+	left: 34%;
+}
+
+.main__img {
+	position: relative;
+	z-index: -1;
+	width: 250%;
+}
+
+.footer {
+	padding: 5.5% 2% 5.5% 2%;
+	display: flex;
+	justify-content: space-between;
+	background-color: #333333;
+}
+
+.footer__block_contact {
+	width: 41.5%;
+	padding-right: 1.5%;
+}
+
+.footer__department {
+	padding-bottom: 7%;
+}
+
+.footer__title_white, .footer__article_text {
+	color: #E0E0E0;
+}
+.footer__title_white {
+	margin: 0 0 7% 0;
+}
+
+.footer__department_name {
+	padding-bottom: 10px;
+}
+
+.footer__article_text {
+	margin: 0;
+}
+
+.footer__phone_text {
+	color: #FFFFFF ;
+}
+
+.footer__department_pnones {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.footer__pnonenumber {
+	padding-right: 7%;
+}
+
+.footer__add_info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__nav {
+	width: 30%;
+}
+
+.footer__nav_link {
+	font-weight: 500;
+	font-size: 1em;
+	color: #FFFFFF;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 150%;
+}
+
+.footer__main_info {
+	width: 58%;
+}
+
+.footer__main_info_text {
+	font-weight: 500;
+	font-size: 1em;
+	color: #FFFFFF;
+	line-height: 130%;
+	margin: 0;
+}
+
+.footer__block_img {
+	width: 58.5%;
+	position: relative;
+
+}
+
+.footer__img {
+	width: 100%;
+}
+
+.footer__block_img::before {
+	content: '';
+	position: absolute;
+	left: 65.75%;
+	bottom: 50.7%;
+	width: 4.14%;
+	height: 7.15%;
+	background-image: url(img/Frame113.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+
