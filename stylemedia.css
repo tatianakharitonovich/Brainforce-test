@@ -286,6 +286,10 @@
 		width: 100%;
 	}
 
+	.main__article_title, .main__article_text {
+		font-size: 0.95em;
+	}
+
 	.footer__title_white {
 		font-size: 1.2em;
 	}
