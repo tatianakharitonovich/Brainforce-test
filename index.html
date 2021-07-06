@@ -28,8 +28,16 @@
 		</nav>
 		<div class="header__nav_add">
 			<a href="#" class="header__link_search">Поиск</a>
-			<button class="header__button">Консультация</button>
+			<button class="header__button" onclick="showModalWin()">Консультация</button>
 		</div>
+		<div id="popupWin" class="modalwin">
+			<button id="buttonClose" class="modalwin__button_close"></button>
+            <h2 class="modalwin__title">Заполните форму и закажите бесплатную консультацию</h2>
+            <form id="form_prediction">
+            	<input id ="users" name="name" type="text" placeholder="Имя" class="modalwin__input" maxlength="13"><br>
+                <input id="phone" name="phone" type="text" placeholder="Телефон" class="modalwin__input"><br>
+                <input id="buttonSubmit" type="button" value="Заказать консультацию" class="modalwin__button_submit">
+            </form>
 	</header>
 	<main class="main">
 		<div class="main__blocklink">
@@ -264,7 +272,7 @@
 			</div>
 		</div>
 		<div class="footer__block_img">
-			<img src="img/MapsicleMap.png" class="footer__img" width="797"alt="Map">
+			<img src="img/MapsicleMap.png" class="footer__img" width="797" alt="Map">
 		</div>
 	</footer>
 	<script src="script.js"></script>
