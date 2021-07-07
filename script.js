@@ -31,6 +31,8 @@ articleText = document.querySelectorAll('.main__article_text'),
 articleTitle = document.querySelectorAll('.main__article_title'),
 darkLayer = document.getElementById('shadow');
 
+
+
 burger.addEventListener('click', ()=> {
 	burger.classList.toggle ('header__burger_button_click'); 
 	navLink.forEach (item => item.classList.toggle ('header__link_click'));
@@ -59,39 +61,40 @@ function close() {
 		blockNav.classList.remove ('header__nav_click');
 }
 
-
-function showModalWin() {
-  darkLayer.style.display='block';
-  const modalWin = document.getElementById('popupWin');
-  modalWin.style.display = 'block';
-  const buttonClose = document.getElementById('buttonClose'),
+const buttonClose = document.getElementById('buttonClose'),
   inputName = document.getElementById('users'),
   inputPhone = document.getElementById('phone'),
   nameMess = document.getElementById('nameMess'),
   phoneMess = document.getElementById('phoneMess'),
-  buttonSubmit = document.getElementById('buttonSubmit');
- 
-  buttonClose.onclick = closeModalWin;
+  buttonSubmit = document.getElementById('buttonSubmit'),
+  modalWin = document.getElementById('popupWin');
 
-  darkLayer.onclick = closeModalWin;
+function showModalWin() {
+  darkLayer.style.display='block';
+  modalWin.style.display = 'block';
 
-  function closeModalWin () {
-    darkLayer.style.display='none';
-    modalWin.style.display = 'none';
-    inputName.value='';
-    inputPhone.value='';
-    inputName.style.marginBottom = '30px';
-    inputName.style.border='1px solid #828282';
-    nameMess.style.display='none';
-    nameMess.style.color='#219653';
-    phoneMess.style.display='none';
-    inputPhone.style.marginBottom = '40px';
-    inputPhone.style.border='1px solid #828282';
-    inputPhone.placeholder = 'Телефон';
-    phoneMess.style.color='#219653';
-    phoneMess.innerHTML = ``;
-    return false;
-  }
+
+buttonClose.onclick = closeModalWin;
+
+darkLayer.onclick = closeModalWin;
+
+function closeModalWin () {
+  darkLayer.style.display='none';
+  modalWin.style.display = 'none';
+  inputName.value='';
+  inputPhone.value='';
+  inputName.style.marginBottom = '30px';
+  inputName.style.border='1px solid #828282';
+  nameMess.style.display='none';
+  nameMess.style.color='#219653';
+  phoneMess.style.display='none';
+  inputPhone.style.marginBottom = '40px';
+  inputPhone.style.border='1px solid #828282';
+  inputPhone.placeholder = 'Телефон';
+  phoneMess.style.color='#219653';
+  phoneMess.innerHTML = ``;
+  return false;
+}
 
   inputName.addEventListener('focus', function (event) {
     this.style.border='1px solid #333333';
@@ -177,6 +180,7 @@ function showModalWin() {
       inputName.style.marginBottom = '0';
       inputName.style.border='2px solid #EB5757';
     }
+    
     if (inputPhone.value ==='') {
       phoneMess.innerHTML = `Обязательное поле`;
       phoneMess.style.display='block';
@@ -184,6 +188,7 @@ function showModalWin() {
       inputPhone.style.marginBottom = '0';
       inputPhone.style.border='2px solid #EB5757';
     }
+    
     if (inputPhone.value !='' && (inputPhone.value.includes('_') || inputPhone.value.indexOf('+375', 0) === -1)) {
         inputPhone.focus();
         inputPhone.style.marginBottom = '0';
@@ -198,7 +203,6 @@ function showModalWin() {
         inputPhone.value.indexOf('+375', 0) != -1 ) {
         closeModalWin();
         openModalMes();
-        console.log('привет');
     }
   }
 
@@ -218,4 +222,3 @@ function showModalWin() {
     }
   }
 }
-
