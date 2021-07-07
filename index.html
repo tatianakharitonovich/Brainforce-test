@@ -35,7 +35,9 @@
             <h2 class="modalwin__title">Заполните форму и закажите бесплатную консультацию</h2>
             <form id="form_prediction">
             	<input id ="users" name="name" type="text" placeholder="Имя" class="modalwin__input" maxlength="13"><br>
-                <input id="phone" name="phone" type="text" placeholder="Телефон" class="modalwin__input"><br>
+            	<p id="nameMess"></p>
+                <input id="phone" name="phone" type="tel" placeholder="Телефон" class="modalwin__input" pattern="\+375[\(]{0,1}9[0-9]{2}[\)]{0,1}\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"><br>
+                <p id="phoneMess"></p>
                 <input id="buttonSubmit" type="button" value="Заказать консультацию" class="modalwin__button_submit">
             </form>
 	</header>
