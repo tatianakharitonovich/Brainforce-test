@@ -147,6 +147,8 @@
 		align-items: flex-start;
 		top: 80px;
 		z-index: 3;
+		width: 35%;
+		padding-right: 0;
 	}
 
 	.header__nav_add {
@@ -222,6 +224,10 @@
 		width: 40%;
 	}
 
+	.header__nav_click {
+		width: 45%;
+	}
+
 	.main__subtitle {
 		font-size: 1em;
 	}
@@ -254,6 +260,10 @@
 
 	.header__nav_add {
 		width: 45%;
+	}
+
+	.header__nav_click {
+		width: 60%;
 	}
 
 	.main__link {
@@ -312,7 +322,7 @@
 		padding-left: 15px;
 	}
 
-	#numberMess, #phoneMess {
+	#nameMess, #phoneMess {
 		width: 97%;
 	}
 
@@ -332,6 +342,10 @@
 
 	.header__nav_add {
 		width: 60%;
+	}
+
+	.header__nav_click {
+		width: 70%;
 	}
 
 	.main__link {
