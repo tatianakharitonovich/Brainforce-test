@@ -146,7 +146,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		top: 80px;
-		z-index: 2;
+		z-index: 3;
 	}
 
 	.header__nav_add {
@@ -323,6 +323,7 @@
 	.modalmes__button_close {
 		margin: 1.7% 0 0 94%;
 	}
+}
 
 @media (max-width: 400px) {
 	.header__burger {
