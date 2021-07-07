@@ -100,6 +100,20 @@
 	.footer__article_text {
 		font-size: 0.8em;
 	}
+
+	#modalMes {
+		height: 255px;
+	}
+
+	.modalMes__title {
+		font-size: 30px;
+		margin: 3% 0 1.7% 0;
+	}
+
+	.modalMes__text {
+		width: 60%;
+		margin: 1.7% 20% 1.7% 20%;
+	}
 }
 
 @media (max-width: 850px) {
@@ -177,6 +191,26 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	#modalMes {
+		width: 90%;
+		height: 230px;
+	}
+
+	.modalMes__title {
+		font-size: 23px;
+		margin: 1.7% 0 1.7% 0;
+	}
+
+	.modalMes__text {
+		width: 80%;
+		font-size: 18px;
+		margin: 1.7% 10% 1.7% 10%;
+	}
+
+	.modalmes__button_close {
+		margin: 1.7% 0 0 95%;
+	}
 }
 
 @media (max-width: 600px) {
@@ -206,6 +240,10 @@
 
 	.footer__main_info {
 		width: 60%;
+	}
+
+	#modalMes {
+		height: 170px;
 	}
 }
 
@@ -277,7 +315,14 @@
 	#numberMess, #phoneMess {
 		width: 97%;
 	}
-}
+
+	#modalMes {
+		background-size: 190%;
+	}
+
+	.modalmes__button_close {
+		margin: 1.7% 0 0 94%;
+	}
 
 @media (max-width: 400px) {
 	.header__burger {
