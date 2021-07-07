@@ -29,14 +29,13 @@ navLink = document.querySelectorAll('.header__link'),
 button= document.querySelectorAll('.main__article_button'),
 articleText = document.querySelectorAll('.main__article_text'),
 articleTitle = document.querySelectorAll('.main__article_title'),
-darkLayer = document.createElement('div');
+darkLayer = document.getElementById('shadow');
 
 burger.addEventListener('click', ()=> {
 	burger.classList.toggle ('header__burger_button_click'); 
 	navLink.forEach (item => item.classList.toggle ('header__link_click'));
 	blockNav.classList.toggle ('header__nav_click');
-  darkLayer.id = 'shadow';
-  darkLayer.title = 'закрыть';
+  darkLayer.style.display='block';
   document.body.appendChild(darkLayer);
 });
 
@@ -55,17 +54,14 @@ function openText (index) {
 	
 function close() {
 		navLink.forEach (item => item.classList.remove ('header__link_click'));
-    darkLayer.parentNode.removeChild(darkLayer);
+    darkLayer.style.display='none';
 		burger.classList.remove ('header__burger_button_click');
 		blockNav.classList.remove ('header__nav_click');
 }
 
 
 function showModalWin() {
-  const darkLayer = document.createElement('div');
-  darkLayer.id = 'shadow';
-  darkLayer.title = 'закрыть';
-  document.body.appendChild(darkLayer);
+  darkLayer.style.display='block';
   const modalWin = document.getElementById('popupWin');
   modalWin.style.display = 'block';
   const buttonClose = document.getElementById('buttonClose'),
@@ -80,7 +76,7 @@ function showModalWin() {
   darkLayer.onclick = closeModalWin;
 
   function closeModalWin () {
-    darkLayer.parentNode.removeChild(darkLayer);
+    darkLayer.style.display='none';
     modalWin.style.display = 'none';
     inputName.value='';
     inputPhone.value='';
@@ -93,9 +89,9 @@ function showModalWin() {
     inputPhone.style.border='1px solid #828282';
     inputPhone.placeholder = 'Телефон';
     phoneMess.style.color='#219653';
-    // phoneMess.innerHTML = ``;
+    phoneMess.innerHTML = ``;
     return false;
-  };
+  }
 
   inputName.addEventListener('focus', function (event) {
     this.style.border='1px solid #333333';
@@ -141,7 +137,7 @@ function showModalWin() {
     this.style.marginBottom = '40px';
     this.style.border='1px solid #828282';
   }
-  
+
   function setCursorPosition(pos, e) {
     if (e.setSelectionRange) e.setSelectionRange(pos, pos);
     else if (e.createTextRange) {
@@ -171,7 +167,7 @@ function showModalWin() {
     setCursorPosition(i, this)
   }
 
-  buttonSubmit.addEventListener('focus', sendSubmit);
+  buttonSubmit.onclick = sendSubmit;
 
   function sendSubmit() {
     if (inputName.value ==='') {
@@ -181,47 +177,45 @@ function showModalWin() {
       inputName.style.marginBottom = '0';
       inputName.style.border='2px solid #EB5757';
     }
-
     if (inputPhone.value ==='') {
       phoneMess.innerHTML = `Обязательное поле`;
       phoneMess.style.display='block';
       phoneMess.style.color='#EB5757';
       inputPhone.style.marginBottom = '0';
       inputPhone.style.border='2px solid #EB5757';
-    } else if (inputPhone.value.includes('_') || inputPhone.value.indexOf('+375', 0) === -1) {
+    }
+    if (inputPhone.value !='' && (inputPhone.value.includes('_') || inputPhone.value.indexOf('+375', 0) === -1)) {
         inputPhone.focus();
         inputPhone.style.marginBottom = '0';
         phoneMess.innerHTML = `Неверный номер`;
         phoneMess.style.display ='block';
         phoneMess.style.color ='#219653';
-      }
-    
-    console.log('привет');
+    } 
+
+    if (inputName.value !='' && 
+        inputPhone.value !='' && 
+        !inputPhone.value.includes('_') && 
+        inputPhone.value.indexOf('+375', 0) != -1 ) {
+        closeModalWin();
+        openModalMes();
+        console.log('привет');
+    }
   }
 
-  
+  function openModalMes () {
+    const modalMes = document.getElementById('modalMes'),
+    buttonCloseMes = document.getElementById('buttonCloseMes'); 
 
-  
+    darkLayer.style.display='block';
+    modalMes.style.display = 'block';
 
-       
-  // // const img = document.createElement('');
-  // let i=1;
+    darkLayer.onclick = closeModalMes;
+    buttonCloseMes.onclick = closeModalMes;
 
-  // buttonSubmit.onclick = function () {
-  //     if (i > 3) {
-  //       darkLayer.parentNode.removeChild(darkLayer);
-  //         modalWin.style.display = 'none';
-  //         img.style.display = 'none';
-  //         return false;
-  //     };
-
-  //     if (i===3) { 
-  //       buttonRetention.value = 'Close';
-  //     };
-
-  //     numberAttempts.innerHTML = `loarding...`;}
-
-    
-      
+    function closeModalMes () {
+      darkLayer.style.display='none';
+      modalMes.style.display = 'none';
+    }
+  }
 }
 
