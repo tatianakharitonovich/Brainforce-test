@@ -443,8 +443,6 @@ body {
 	background-repeat: no-repeat;
 }
 
-
-
 .modalwin { 
     height: 319px;  
     width: 395px;
@@ -456,13 +454,13 @@ body {
     right: 0;
     left: 0;
     margin: 0 auto;
-    z-index:2;
+    z-index:3;
     display: none; 
     position: fixed;
     padding: 0 26px 40px 26px;
 }
 
-.modalwin__button_close {
+.modalwin__button_close, .modalmes__button_close {
 	width: 16.6px;
 	height: 16.6px;
 	cursor: pointer;
@@ -544,27 +542,65 @@ body {
 	cursor: pointer;
 }
 
-/*.img_prediction {
-	margin: 0 auto;
-	width: 40%;
-    top: 47%;
+#modalMes {
+	width: 80%;
+	height: 333px;  
+    border-radius: 8px; 
+    background-image: url(img/Rectangle211.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 8%; 
     right: 0;
     left: 0;
+    margin: 0 auto;
     z-index:3;
+    display: none; 
     position: fixed;
-}*/
+}
 
+.modalMes__title, .modalMes__text {
+	font-weight: 500;
+	line-height: 124%;
+	text-align: center;
+	color: #333333;
+}
 
+.modalMes__title {
+	font-size: 36px;
+	margin: 5% 0 1.7% 0;
+	text-shadow: 0 -1px rgba(0,0,0,.5);
+  	-webkit-animation: pulsate 2s linear infinite;
+	animation: pulsate 2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+ 50% { color: #808080; text-shadow: 0 -1px rgba(0,0,0,.7), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+
+@keyframes pulsate {
+ 	50% { color: #808080; text-shadow: 0 -1px rgba(0,0,0,.7), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+
+.modalMes__text {
+	width: 34%;
+	font-size: 20px;
+	margin: 1.7% 33% 1.7% 33%;
+}
+
+.modalmes__button_close {
+	margin: 1.7% 0 0 96%;
+}
 
 #shadow { 
     position: fixed;
     width:100%;
     height:100%;
-    z-index:1; 
+    z-index:2; 
     background:#000;
     opacity: 0.5; 
     left:0;
     top:0;
+    display: none;
 }
 
 
