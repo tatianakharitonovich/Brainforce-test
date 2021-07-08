@@ -312,13 +312,6 @@ body {
 	transform: rotate(45deg);
 }
 
-.main__article_button:hover {
-	background-image:url(img/startactive.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	border: 0;
-}
-
 .main__section_chat {
 	width: 33%;
 }
