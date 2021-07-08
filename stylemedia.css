@@ -147,7 +147,7 @@
 		align-items: flex-start;
 		top: 80px;
 		z-index: 3;
-		width: 35%;
+		width: 272px;
 		padding-right: 0;
 	}
 
@@ -224,10 +224,6 @@
 		width: 40%;
 	}
 
-	.header__nav_click {
-		width: 45%;
-	}
-
 	.main__subtitle {
 		font-size: 1em;
 	}
@@ -260,10 +256,6 @@
 
 	.header__nav_add {
 		width: 45%;
-	}
-
-	.header__nav_click {
-		width: 60%;
 	}
 
 	.main__link {
@@ -342,10 +334,6 @@
 
 	.header__nav_add {
 		width: 60%;
-	}
-
-	.header__nav_click {
-		width: 70%;
 	}
 
 	.main__link {
