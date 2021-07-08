@@ -2,7 +2,8 @@
 
 https://tatianakharitonovich.github.io/Brainforce-test/
 
-Проект выполнен по макету https://www.figma.com/file/9jjTU3MpVYhwfjqp4G3AHG/test-(Copy)
+Проект выполнен по макету https://www.figma.com/file/9jjTU3MpVYhwfjqp4G3AHG/test-(Copy).
+Использована семантическая верстка, вёрстка на флексах.
 HTML-код проверен на валидаторе.
 
 Стандартное потоковое перестроение, адаптив корректно отображается на разрешениях от 1920 до 320 px.
