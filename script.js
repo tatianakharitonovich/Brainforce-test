@@ -45,13 +45,28 @@ darkLayer.addEventListener('click',close);
 
 navLink.forEach (item => {item.addEventListener('click', close)});
 
-button.forEach ((item, index) => item.onclick = openText.bind(this, index));
+button.forEach ((item, index) => {
+  item.onclick = openText.bind(this, index);
+  item.onmouseover = appointFocus.bind(this, index);
+  item.onmouseout = canselFocus.bind(this, index);
+  item.onblur = canselFocus.bind(this, index)
+
+});
 
 articleTitle.forEach ((item, index) => item.onclick = openText.bind(this, index));
 
 function openText (index) {
 	button[index].classList.toggle('main__article_button_rotate');
-	articleText[index].classList.toggle('main__article_text_open');
+  articleText[index].classList.toggle('main__article_text_open');
+  button[index].blur();
+ }
+
+function appointFocus (index) {
+  button[index].style.backgroundImage = 'url(img/startactive.png)';
+ }
+
+function canselFocus (index) {
+  button[index].style.backgroundImage = 'url(img/statnormal.png)';
 }
 	
 function close() {
