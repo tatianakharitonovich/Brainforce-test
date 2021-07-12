@@ -89,27 +89,27 @@ function showModalWin() {
   modalWin.style.display = 'block';
 
 
-buttonClose.onclick = closeModalWin;
+  buttonClose.onclick = closeModalWin;
 
-darkLayer.onclick = closeModalWin;
+  darkLayer.onclick = closeModalWin;
 
-function closeModalWin () {
-  darkLayer.style.display='none';
-  modalWin.style.display = 'none';
-  inputName.value='';
-  inputPhone.value='';
-  inputName.style.marginBottom = '30px';
-  inputName.style.border='1px solid #828282';
-  nameMess.style.display='none';
-  nameMess.style.color='#219653';
-  phoneMess.style.display='none';
-  inputPhone.style.marginBottom = '40px';
-  inputPhone.style.border='1px solid #828282';
-  inputPhone.placeholder = 'Телефон';
-  phoneMess.style.color='#219653';
-  phoneMess.innerHTML = ``;
-  return false;
-}
+  function closeModalWin () {
+    darkLayer.style.display='none';
+    modalWin.style.display = 'none';
+    inputName.value='';
+    inputPhone.value='';
+    inputName.style.marginBottom = '30px';
+    inputName.style.border='1px solid #828282';
+    nameMess.style.display='none';
+    nameMess.style.color='#219653';
+    phoneMess.style.display='none';
+    inputPhone.style.marginBottom = '40px';
+    inputPhone.style.border='1px solid #828282';
+    inputPhone.placeholder = 'Телефон';
+    phoneMess.style.color='#219653';
+    phoneMess.innerHTML = ``;
+    return false;
+  }
 
   inputName.addEventListener('focus', function (event) {
     this.style.border='1px solid #333333';
